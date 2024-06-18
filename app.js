@@ -48,12 +48,12 @@ app.use(
   session({
     secret: "Ihsanxna",
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     proxy: true,
     name: "xna_session",
     cookie: {
       path: "/",
-      httpOnly: false,
+      httpOnly: true,
       secure: process.env.NODE_ENV === "production", // Set to true if using HTTPS
       maxAge: 1000 * 60 * 60 * 24, // 24 hours
       sameSite: "none",

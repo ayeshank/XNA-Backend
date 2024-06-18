@@ -54,8 +54,12 @@ app.use(
     },
   })
 );
+// "node": "16.13.2",
+app.use(require("./api/auth"));
 
-app.use(require("./router/auth"));
+app.get("/", (req, res) => {
+  res.send("hello from backend ank");
+});
 
 // "./xna/build/index.html"
 if (process.env.NODE_ENV === "production") {

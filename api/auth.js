@@ -24,24 +24,24 @@ const conn = mongoose
   });
 
 const Member = require("../schema.js");
-const Admin = require("./adminSchema.js");
-const xnaLog = require("./xnaLogSchema.js");
-const referral = require("./referralSchema.js");
-const MemberLog = require("./membersLog.js");
-const buysell = require("./buysellSchema.js");
-const audLog = require("./audLogSchema.js");
-const companyLog = require("./companyLogSchema.js");
-const newMember = require("./NewMemberSchema.js");
-const companyCalc = require("./companySchema.js");
-const MemberFee = require("./memberfeeSchema.js");
-const refPay = require("./ReferralPaymentSchema.js");
-const compSet = require("./CompSettingSchema.js");
-const buysellSet = require("./BuySellSettingSchema.js");
-const compInpSet = require("./compInputSetSchema.js");
-const transfer = require("./transferSchema.js");
-const ForgotPassword = require("./forgotPassword.js");
-const InviteMember = require("./InviteMemberSchema.js");
-const PrefCurr = require("./prefferedCurrencySchema.js");
+const Admin = require("../router/adminSchema.js");
+const xnaLog = require("../router/xnaLogSchema.js");
+const referral = require("../router/referralSchema.js");
+const MemberLog = require("../router/membersLog.js");
+const buysell = require("../router/buysellSchema.js");
+const audLog = require("../router/audLogSchema.js");
+const companyLog = require("../router/companyLogSchema.js");
+const newMember = require("../router/NewMemberSchema.js");
+const companyCalc = require("../router/companySchema.js");
+const MemberFee = require("../router/memberfeeSchema.js");
+const refPay = require("../router/ReferralPaymentSchema.js");
+const compSet = require("../router/CompSettingSchema.js");
+const buysellSet = require("../router/BuySellSettingSchema.js");
+const compInpSet = require("../router/compInputSetSchema.js");
+const transfer = require("../router/transferSchema.js");
+const ForgotPassword = require("../router/forgotPassword.js");
+const InviteMember = require("../router/InviteMemberSchema.js");
+const PrefCurr = require("../router/prefferedCurrencySchema.js");
 
 //****************************************************************************************************/
 //****************************************************************************************************/

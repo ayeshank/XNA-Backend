@@ -1,0 +1,74 @@
+const mongoose= require('mongoose');
+
+var refPaySchema=new mongoose.Schema({
+  date:{
+    type:Date,
+    default:Date.now
+  },
+  adminname:
+  {
+      type:String,
+      required:false  
+  },
+  adminno:
+  {
+      type:String,
+      required:false  
+  },
+  RefPerLVL1:{
+    type:Number,
+    required:false 
+  }, 
+  RefPerLVL2:{
+    type:Number,
+    required:false 
+  }, 
+  
+  RefPerLVL3:{
+    type:Number,
+    required:false 
+  }, 
+  RefPerLVL4:{
+    type:Number,
+    required:false 
+  }, 
+  RefPerLVL5:{
+    type:Number,
+    required:false 
+  }, 
+  RefPerLVL6:{
+    type:Number,
+    required:false 
+  }, 
+  RefPerLVL7:{
+    type:Number,
+    required:false 
+  }, 
+  RefPerLVL8:{
+    type:Number,
+    required:false 
+  }, 
+  RefPerLVL9:{
+    type:Number,
+    required:false 
+  }, 
+  RefPerLVL10:{
+    type:Number,
+    required:false 
+  }, 
+  RefPerLVL11:{
+    type:Number,
+    required:false 
+  }, 
+  RefPerLVL12:{
+    type:Number,
+    required:false 
+  }, 
+  TotRef:{
+    type:Number,
+    required:false 
+  }, 
+});
+
+const refPay= new mongoose.model('refPay',refPaySchema);
+module.exports=refPay;

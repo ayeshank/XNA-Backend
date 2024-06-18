@@ -60,6 +60,7 @@ app.use(
     },
   })
 );
+app.set("trust proxy", 1); // Trust first proxy
 // "node": "16.13.2",
 app.use(require("./api/auth"));
 

@@ -35,13 +35,12 @@ mongoose
 app.use(
   cors({
     origin:
-      process.process.env.NODE_ENV === "production"
-        ? "https://xna-frontend.vercel.app"
-        : "http://localhost:3000",
+      process.env.NODE_ENV === "production"
+        ? "https://xna-frontend.vercel.app/"
+        : "http://localhost:3000", // Allow requests from this origin
     credentials: true, // Enable sending cookies across domains
   })
 );
-
 app.use(express.json());
 app.use(cookieParser());
 

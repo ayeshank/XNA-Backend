@@ -49,11 +49,14 @@ app.use(
     secret: "Ihsanxna",
     resave: false,
     saveUninitialized: true,
+    proxy: true,
+    name: "xna_session",
     cookie: {
       path: "/",
-      httpOnly: true,
+      httpOnly: false,
       secure: process.env.NODE_ENV === "production", // Set to true if using HTTPS
       maxAge: 1000 * 60 * 60 * 24, // 24 hours
+      sameSite: "none",
     },
   })
 );

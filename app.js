@@ -44,6 +44,11 @@ app.use(
 app.use(express.json());
 app.use(cookieParser());
 
+app.use((req, res, next) => {
+  res.set("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate");
+  next();
+});
+
 app.use(
   session({
     secret: "Ihsanxna",
@@ -69,17 +74,17 @@ app.get("/", (req, res) => {
 });
 
 // "./xna/build/index.html"
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("xna/build"));
-//   app.get("/*", function (req, res) {
-//     res.sendFile(path.join(__dirname, "xna", "build", "index.html"));
-//     // res.sendFile(path.join(__dirname,"./xna/build/index.html" ));
-//   });
-// } else {
-//   app.get("/", (req, res) => {
-//     res.send("hello from backend");
-//   });
-// }
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("xna/build"));
+  app.get("/*", function (req, res) {
+    res.sendFile(path.join(__dirname, "xna", "build", "index.html"));
+    // res.sendFile(path.join(__dirname,"./xna/build/index.html" ));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.send("hello from backend");
+  });
+}
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

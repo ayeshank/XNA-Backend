@@ -49,7 +49,7 @@ app.use(
     cookie: {
       path: "/",
       httpOnly: true,
-      secure: false, // Set to true if using HTTPS
+      secure: process.env.NODE_ENV === "production", // Set to true if using HTTPS
       maxAge: 1000 * 60 * 60 * 24, // 24 hours
     },
   })

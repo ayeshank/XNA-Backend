@@ -49,7 +49,6 @@ app.use(
     secret: "Ihsanxna",
     resave: false,
     saveUninitialized: false,
-    proxy: true,
     name: "xna_session",
     cookie: {
       path: "/",
@@ -60,7 +59,7 @@ app.use(
     },
   })
 );
-app.set("trust proxy", 1); // Trust first proxy
+// app.set("trust proxy", 1); // Trust first proxy
 // "node": "16.13.2",
 app.use(require("./api/auth"));
 
